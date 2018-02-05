@@ -12,6 +12,7 @@ done
 >&2 echo "Postgres is up - executing command"
 ${ECCUBE_PATH}/exec_env.sh
 
+bin/console cache:warmup --no-optional-warmers
 
 bin/console doctrine:schema:create
 bin/console eccube:fixtures:load
