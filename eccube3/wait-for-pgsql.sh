@@ -17,5 +17,7 @@ bin/console cache:warmup --no-optional-warmers
 bin/console doctrine:schema:create
 bin/console eccube:fixtures:load
 
+bin/console cache:warmup
+
 chown -R www-data:www-data ${ECCUBE_PATH}/app
 apache2-foreground
